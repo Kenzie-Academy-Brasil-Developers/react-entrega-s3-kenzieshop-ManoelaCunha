@@ -1,12 +1,14 @@
 import "./App.css";
+import Menu from "./components/Menu";
 import Routes from "./routes";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Menu />
+      <div className="App-header">
         <Routes />
-      </header>
+      </div>
     </div>
   );
 }
