@@ -1,16 +1,19 @@
 import { useDispatch } from "react-redux";
-import { addToCart, removeFromCart } from "../../store/modules/cart/actions";
+import {
+  addToCartThunk,
+  removeFromCartThunk,
+} from "../../store/modules/cart/thunks";
 
 const Product = ({ product, isRemovable = false }) => {
   const dispatch = useDispatch();
   const { id, name, price } = product;
 
   const handleAddToCart = () => {
-    dispatch(addToCart(product));
+    dispatch(addToCartThunk(product));
   };
 
   const handleRemoveFromCart = () => {
-    dispatch(removeFromCart(id));
+    dispatch(removeFromCartThunk(id));
   };
 
   return (
