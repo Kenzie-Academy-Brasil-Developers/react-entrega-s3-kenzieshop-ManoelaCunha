@@ -2,7 +2,7 @@ import "./App.css";
 import Menu from "./components/Menu";
 import Routes from "./routes";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Menu />
@@ -11,6 +11,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
