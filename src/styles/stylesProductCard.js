@@ -8,10 +8,11 @@ export const useStyles = makeStyles(() => ({
     flexWrap: "wrap",
     justifyContent: "center",
   },
+  boxTitle: {
+    marginTop: "40px",
+  },
   title: {
     color: "darkblue",
-    marginTop: "40px",
-    marginBottom: "20px",
     textShadow: "1px 1px 2px darkgrey",
   },
   titleTwo: {

@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <>
-      <Box>
+      <Box className={classes.boxTitle}>
         <Typography variant="h3" className={classes.title}>
           CURSOS DE PROGRAMAÇÃO
         </Typography>
