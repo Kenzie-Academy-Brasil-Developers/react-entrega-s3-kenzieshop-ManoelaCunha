@@ -27,6 +27,7 @@ export const useStyles = makeStyles(() => ({
   card: {
     margin: "8px",
     width: "200px",
+    paddingBottom: "10px",
   },
   image: {
     borderTopLeftRadius: "4px",
@@ -35,9 +36,6 @@ export const useStyles = makeStyles(() => ({
   },
   text: {
     margin: "5px",
-  },
-  button: {
-    margin: "10px",
   },
   container: {
     display: "flex",

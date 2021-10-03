@@ -38,18 +38,12 @@ const Product = ({ product, isRemovable = false, productIndex }) => {
         <Button
           color="primary"
           variant="contained"
-          className={classes.button}
           onClick={handleRemoveFromCart}
         >
           Remover
         </Button>
       ) : (
-        <Button
-          color="primary"
-          variant="contained"
-          className={classes.button}
-          onClick={handleAddToCart}
-        >
+        <Button color="primary" variant="contained" onClick={handleAddToCart}>
           Adicionar
         </Button>
       )}
