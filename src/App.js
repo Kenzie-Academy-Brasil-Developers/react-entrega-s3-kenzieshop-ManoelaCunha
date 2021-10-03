@@ -1,6 +1,5 @@
-import "./App.css";
-import Menu from "./components/Menu";
 import Routes from "./routes";
+import Menu from "./components/Menu";
 import GlobalStyles from "./styles/stylesGlobal";
 
 const App = () => {

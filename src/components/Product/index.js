@@ -7,17 +7,17 @@ import {
   removeFromCartThunk,
 } from "../../store/modules/cart/thunks";
 
-const Product = ({ product, isRemovable = false }) => {
+const Product = ({ product, isRemovable = false, productIndex }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const { id, name, price, image } = product;
+  const { name, price, image } = product;
 
   const handleAddToCart = () => {
     dispatch(addToCartThunk(product));
   };
 
   const handleRemoveFromCart = () => {
-    dispatch(removeFromCartThunk(id));
+    dispatch(removeFromCartThunk(productIndex));
   };
 
   return (

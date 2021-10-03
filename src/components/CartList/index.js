@@ -10,7 +10,12 @@ const CartList = () => {
   return (
     <Box className={classes.box}>
       {cart.map((product, index) => (
-        <Product key={index} product={product} isRemovable />
+        <Product
+          key={index}
+          productIndex={index}
+          product={product}
+          isRemovable
+        />
       ))}
     </Box>
   );
