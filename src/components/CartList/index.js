@@ -1,15 +1,18 @@
+import { Box } from "@material-ui/core";
 import { useSelector } from "react-redux";
+import { useStyles } from "../../styles/stylesProductCard";
 import Product from "../Product";
 
 const CartList = () => {
+  const classes = useStyles();
   const cart = useSelector((store) => store.cart);
 
   return (
-    <div>
-      {cart.map((product) => (
-        <Product key={product.id} product={product} isRemovable />
+    <Box className={classes.box}>
+      {cart.map((product, index) => (
+        <Product key={index} product={product} isRemovable />
       ))}
-    </div>
+    </Box>
   );
 };
 

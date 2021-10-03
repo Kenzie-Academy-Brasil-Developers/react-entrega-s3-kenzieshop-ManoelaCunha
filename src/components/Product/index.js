@@ -1,3 +1,6 @@
+import { useStyles } from "../../styles/stylesProductCard";
+import { Button, Paper, Typography } from "@material-ui/core";
+
 import { useDispatch } from "react-redux";
 import {
   addToCartThunk,
@@ -5,8 +8,9 @@ import {
 } from "../../store/modules/cart/thunks";
 
 const Product = ({ product, isRemovable = false }) => {
+  const classes = useStyles();
   const dispatch = useDispatch();
-  const { id, name, price } = product;
+  const { id, name, price, image } = product;
 
   const handleAddToCart = () => {
     dispatch(addToCartThunk(product));
@@ -17,15 +21,39 @@ const Product = ({ product, isRemovable = false }) => {
   };
 
   return (
-    <div>
-      <h3>{name}</h3>
-      <h3>{price}</h3>
+    <Paper elevation={3} className={classes.card}>
+      <figure>
+        <img src={image} alt={name} className={classes.image} />
+      </figure>
+      <Typography variant="h5" className={classes.text}>
+        {name}
+      </Typography>
+      <Typography variant="h6" className={classes.text}>
+        {price.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </Typography>
       {isRemovable ? (
-        <button onClick={handleRemoveFromCart}>Remover</button>
+        <Button
+          color="primary"
+          variant="contained"
+          className={classes.button}
+          onClick={handleRemoveFromCart}
+        >
+          Remover
+        </Button>
       ) : (
-        <button onClick={handleAddToCart}>Adicionar</button>
+        <Button
+          color="primary"
+          variant="contained"
+          className={classes.button}
+          onClick={handleAddToCart}
+        >
+          Adicionar
+        </Button>
       )}
-    </div>
+    </Paper>
   );
 };
 

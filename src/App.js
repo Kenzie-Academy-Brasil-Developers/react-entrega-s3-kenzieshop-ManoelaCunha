@@ -1,15 +1,15 @@
 import "./App.css";
 import Menu from "./components/Menu";
 import Routes from "./routes";
+import GlobalStyles from "./styles/stylesGlobal";
 
 const App = () => {
   return (
-    <div className="App">
+    <main>
       <Menu />
-      <div className="App-header">
-        <Routes />
-      </div>
-    </div>
+      <Routes />
+      <GlobalStyles />
+    </main>
   );
 };
 

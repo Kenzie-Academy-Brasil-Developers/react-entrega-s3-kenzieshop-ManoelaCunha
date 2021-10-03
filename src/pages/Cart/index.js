@@ -1,11 +1,12 @@
 import CartList from "../../components/CartList";
+import CartOrderSummary from "../../components/CartOrder";
 
 const Cart = () => {
   return (
-    <div>
-      <h1>Carrinho de Compras</h1>
+    <>
+      <CartOrderSummary />
       <CartList />
-    </div>
+    </>
   );
 };
 
