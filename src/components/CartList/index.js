@@ -9,8 +9,13 @@ const CartList = () => {
 
   return (
     <Box className={classes.box}>
-      {cart.map((product, i) => (
-        <Product key={i} productIndex={index} product={product} isRemovable />
+      {cart.map((product, index) => (
+        <Product
+          key={index}
+          productIndex={index}
+          product={product}
+          isRemovable
+        />
       ))}
     </Box>
   );
